@@ -1,26 +1,252 @@
 <style>
-  body {
-    background-color: rgb(91, 146, 229);
+  html, body{
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
   }
 
-  .logo {
-    width: 100%;
+  canvas {
+   display: block;
+   height: 100%;
+   width: 100%;
   }
 
-  article {
-    max-width: 500px;
-    margin: 0 auto;
-    color: rgb(255, 255, 255);
+  html {
+    background: rgb(61,173,219);
+    background: linear-gradient(360deg, rgba(61,173,219,1) 16%, rgba(77,131,212,1) 100%) fixed;
+    background-repeat: no-repeat;
   }
 
-  h2 {
+  .udhrlogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    width: 20%;
+  }
+
+  h1{
+    margin-top: 1vw;
+    display: block;
+    color: #221E1F;
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: .5vw;
+  }
+
+  h2{
+      font-family: sans-serif;
+      padding-bottom: 0px;
+      font-size: 2.5vw;
+      padding-left: 8vw;
+      margin-top: -2px;
+      display: block;
+      color: #221E1F;
+      line-height: 2.5em;
+      margin-bottom: 7px;
+  }
+
+  .sectionlist{
+    line-height: 4.5vw;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-left: 9vw;
+    margin-top: 1vw;
+    color: #221E1F;
+    margin-bottom: 1vw;
+  }
+
+  .principleslist{
+    display: block;
+    color: #221E1F;
+    font-style: normal;
+    font-size: 1.7vw;
+    font-weight: 600;
+    line-height: 4vw;
+    margin-left: 10vw;
+    margin-top: 0vw;
+    margin-bottom: 1vw;
+  }
+
+  .highlight{
+    border-bottom: 2px solid white;
+  }
+
+  .bolded{
+    font-weight: 700;
+  }
+
+  .greenhighlight{
+    color: #008B8B;
+    font-weight: 600;
+    background: #96c020;
+  }
+
+  .quote{
+    font-weight: bold;
+    font-size: 3vw;
+    margin-right: 1.5vw;
+    margin-left: 1vw;
+  }
+  .udhrarticle{
     font-family: sans-serif;
-    padding-bottom: 10px;
-		border-bottom: 3px solid rgb(255, 255, 255);
+    font-weight: 400;
+    padding-bottom: 0px;
+    font-size: 1.3vw;
+    font-style: italic;
+    padding-left: 12vw;
+    margin-top: 0px;
+    display: block;
+    color: #221E1F;
+    line-height: 2.5em;
+    margin-bottom: 7px;
   }
 
-  p {
-    line-height: 20px;
+  .subarticle{
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-size: 1.5vw;
+    margin-right: 8vw;
+    font-weight: 700;
+  }
+
+  .cyan{
+    color: #00ffef;
+    font-weight: bold;
+  }
+
+  h4{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-size: 1.8vw;
+    padding-left: 12vw;
+    margin-top: 0px;
+    display: block;
+    color: #221E1F;
+    line-height: 2em;
+    margin-bottom: 7px;
+  }
+
+  .italic{
+    font-style: italic;
+  }
+
+  .shadow{
+    text-shadow: 1px 3px 7px #221E1F;
+  }
+
+  .orange{
+    color: #f49d70;
+  }
+
+  .blue{
+    color: #99d3d5;
+  }
+
+  .green1{
+    color: #96c020;
+  }
+
+  .cyanhighlight{
+    border-bottom: 3px solid #00ffef;
+  }
+
+  h5{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-size: 2.3vw;
+    padding-left: 16vw;
+    margin-top: 0px;
+    display: block;
+    color: #221E1F;
+    line-height: 2em;
+    margin-bottom: 7px;
+  }
+
+
+  h6{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-weight: 400;
+    font-size: 1.3vw;
+    padding-left: 20vw;
+    padding-right: 0vw;
+    margin-top: 0px;
+    display: block;
+    color: #221E1F;
+    line-height: 2.8em;
+    margin-bottom: 7px;
+  }
+
+  .lillist{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-weight: 600;
+    font-size: 1.5vw;
+    padding-left: 19vw;
+    margin-top: 0px;
+    display: block;
+    color: #221E1F;
+    line-height: 2em;
+    margin-bottom: 7px;
+  }
+
+  .arrowdown{
+    display: block;
+    margin-left: 1.7vw;
+    margin-bottom: 0px;
+    width: 3%;
+  }
+
+  .metadatah7{
+    font-size: 1.6vw;
+    font-weight: bold;
+    font-style: italic;
+    width: 28vw;
+    color: #00688b;
+    background-color:#97db81;
+    margin-left: 76.5vw;
+    margin-top: 0vw;
+    height: 1.2em;
+  }
+
+  .metadatadiv{
+    display: flex;
+  }
+
+  .bulletpt{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-weight: 400;
+    font-size: 1.5vw;
+    padding-left: 5vw;
+    padding-right: 0vw;
+    width: 47vw;
+    color: #221E1F;
+    line-height: 3em;
+    margin-top: -1.5vw;
+    margin-left: 17vw;
+  }
+
+  p{
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: #221E1F;
+    width: 21%;
+    margin-left: 2.3vw;
+    padding: 1vw .5vw .5vw 1vw;
+    border-style: dashed;
+    border-color: #97db81;
+    border-width: .3vw;
+    height: 40%;
+  }
+
+  iframe{
+    margin-top: 20vw;
+    margin-left: -20.5vw;
   }
 
   .nav{
@@ -74,9 +300,74 @@
 </style>
 
 <body>
-  <img class="logo" src="https://freedomandsafety.com/sites/default/files/UDHR.jpg" alt="UDHR logo">
+  <img class="udhrlogo" src="../assets/UN Logo.png" alt="UN logo">
 <header>
   <h1> Rights Online </h1>
+  <h2>I. Catalogue</h2>
+  <ol class="sectionlist">
+    <li> Overarching Principles</li>
+    <li> Privacy in the Digital Age</li>
+    <li> Freedom of Expression in the Digital Age</li>
+    <li> Netizen Awareness</li>
+    <li> Conclusion: Role of Education</li>
+  </ol>
+  <h2>II. Overarching Principles</h2>
+  <ol class="principleslist">
+    <li> Individuals should recognize that the same rights that people have <span class="greenhighlight">offline</span> must also be protected <span class="greenhighlight">online</span>.</li>
+    <li> Education should <span class="greenhighlight">bring awareness of</span> individuals’ rights and responsibilities associated with their digital activities.</li>
+    <li> Individuals should have a knowledge of <span class="greenhighlight">how to protect</span> their rights.</li>
+  </ol>
+  <h2>III. Rights to Privacy in the Digital Age</h2>
+  <h3 class="udhrarticle"><span class="quote">“</span>No one shall be subjected
+    to arbitrary interference with his  <span class="cyan">privacy</span>,
+    <span class="highlight">family</span>, <span class="highlight">home</span> or <span class="highlight">correspondence</span>,
+    nor to attacks upon his honour and reputation. Everyone has the right to the
+    protection of the law against such interference or attacks.<span class="quote">”</span>
+    <span class="subarticle">--Article 12 UDHR</span><br>
+  </h3>
+  <h4> 1. <span class="cyanhighlight">Reconsider</span> the meanings of these terms:
+     <span class="shadow"><span class="italic"><span class="orange">family</span>, <span class="blue">home</span>,
+     <span class="green1">correspondence</span></span></span> in the online world
+  </h4>
+  <h5><span class="shadow"><span class="orange">A. Family</span></span></h5>
+  <h6 class="lillist">i. The privacy of individuals’ family members, as expressed in <span class="greenhighlight">family life</span>:
+  <h6>When individuals post family photos or information about their family activities online, they should be conscious of the
+    potential threats to not only their privacy but also their family members' privacy.
+    Always ask for family members' <span class="highlight"> permission</span> before sharing their photos.</h6>
+  <h5><span class="shadow"><span class="blue">B. Home</span></span></h5>
+  <h6 class="lillist">
+    i. <span class="cyanhighlight">Extending</span> broad protection to personal space other than one’s residence<br>
+    <img class="arrowdown" src="../assets/arrow-down.png" alt="arrow down">
+    ii. An individual’s home may now encompass <span class="greenhighlight">virtual spaces</span>, such as <span class="highlight">social media websites and email inboxes</span>
+  </h6>
+  <h5><span class="shadow"><span class="green1">C. Correspondence</span></span></h5>
+  <h6 class="lillist">
+    i. include all <span class="greenhighlight">electronic forms</span> of communication, such as electronic mail and instant messages<br>
+  ii. include <span class="highlight"><span class="cyan">METADATA</span></span>
+  </h6>
+  <h7 class="metadatah7">* what is metadata?</h7>
+  <div class="metadatadiv">
+    <ul class="bulletpt">
+      <li>When collected, aggregated, and analyzed,<br>
+      metadata is <span class="highlight">no less sensitive</span> than the contents of communications.</li>
+      <li>There is <span class="highlight">no sharp distinction</span> between the content of a communication and metadata. It’s more of a continuum.</li>
+      <li>Check out the <span class="shadow"><span class="orange">video on the right</span></span> published by Naomi Brockwell to learn more about how metadata impacts online privacy and how to scrub it.</li>
+    </ul>
+  <p>
+    Metadata = "data about data."<br>
+    Metadata is data that provides information about other data.<br>
+    <br>
+    Examples of metadata:<br>
+    -Your IP address<br>
+    -Your location<br>
+    -Your device information<br>
+    -The date the file/image was created<br>
+    ...<br>
+  </p>
+  <iframe width="250" height="170" src="https://youtube.com/embed/OSln3MliFyA"></iframe>
+  </div>
+
+
   <nav>
     <ur class="nav">
       <a href="../index.html" class="sectionBTN0">Home</a>
