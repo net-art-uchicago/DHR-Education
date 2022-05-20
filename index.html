@@ -3,10 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/styles.css">
-    <!-- <link rel="icon" type="image/png" href="assets/...png"> -->
+    
     <meta name="viewport" content="width=device-width">
+    <head>
+      
+
 
     <title>Digitizing Human Rights: Education</title>
+    <link href="../StyleSheet.css" rel="stylesheet">
     <meta name="description" content="Digitizing Human Rights: Educations">
     <meta name="author" content="Cloris Dong, Silvia Craig, Preranaa Srinivas">
 
@@ -15,6 +19,8 @@
     <script src="js/Education.js"></script>
 
     <style>
+
+    
       html, body{
        margin: 0;
        padding: 0;
@@ -94,6 +100,10 @@
         color: #221E1F;
         line-height: 1.8em;
         margin-bottom: 7px;
+      }
+
+      .nav{
+        display: block;
       }
 
       .highlight{
@@ -227,6 +237,32 @@
         text-shadow: 1px 3px 7px #221E1F;
         cursor: wait;
       }
+      .hovertxt {
+  position: relative;
+  }
+
+.hovertxt:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 150px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: relative;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertxt:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
 
     </style>
 </head>
@@ -235,9 +271,18 @@
   <img class="udhrlogo" src="assets/UN Logo.png" alt="UN logo">
 <header>
   <h1> Digitizing Human Rights: Education </h1>
+</header>
   <h2>I. Objective</h2>
-  <h3>To identify the <span class ="highlight">intersection</span> of the digital world and education with the intention of identifying <span class="highlight">universal</span> human rights.</h2>
-  <h2>II. Assumptions</h2>
+  <h3>To identify the <span class ="highlight">intersection</span> of the digital world 
+    and education with the intention of identifying <span class="highlight">universal
+  </span> human rights.</h3>
+    <span class="italic"><span class="cyan"><span class="shadow">
+    <ul>How educated do you feel on the digital world? <br>
+  Where are the gaps?<br>
+  How have you been educated?<br>
+</ul></span></span></span>
+ 
+    <h2>II. Assumptions</h2>
   <h4><span class="UDHRassumptions">1. UDHR Assumptions:</span><br>
       "<span class="bolded">Everyone has the right to education. Education shall be free</span>, at least in the elementary and fundamental stages."<br>
       Education shall be directed to the "<span class="bolded">full development of the human personality and to the strengthening of respect for human rights and fundamental freedoms.</span> It shall promote understanding, tolerance and friendship among all nations, racial or religious groups, and shall further the activities of the United Nations for the maintenance of peace."<br>
@@ -250,26 +295,84 @@
         <li><span class="green">ii. Understanding of the digital world improves human potential and self-actualization.</span></li>
   </h5>
   <h2>III. Bijection</h2>
-  <h3> 1. A Handbook Example: <span class="italic">Digital Citizenship Education Handbook</span></h3>
+  <h3>To explain the intersection between rights regarding Education and the Digital World, this document will 
+    utilize a bijection to 'digitize human rights' <br>
+    <img class="bijection-dhr" src="assets/bijection-dhr.png" alt="bijection-dhr" width=60% height=30%> </span> </h3> 
+    <h5>On one hand, individuals have the right to be educated about the Digital World. This education entails 
+      being knowledgeable of how to be online (accessibility), how to behave once online (well-being), and 
+      of rights that exist in the digital world. <br>
+      On the other hand, as education is a universal right and the digital world is capable of providing largescale and free educational resources,
+      it is in the best interest of the public to invest in online education.</h5>
+  </h3>
+  <h3> The following example provides an explanation of the established bijection: <br>
+    1. A Handbook Example: <span class="italic">Digital Citizenship Education Handbook</span></h3>
   <div class=bullets>
-    <li class="bullet1"> <span class="bolded">Education on human rights in the digital space</span><br>The <span class ="highlight">content</span> of the handbook:<br>Education on human rights in the digital space</li>
+    <li class="bullet1"> <span class="bolded">Education on human rights in the digital world</span><br>The <span class ="highlight">content</span> of the handbook:<br>Education on human rights in the digital space</li>
     <span title="Digital Citizenship Education Handbook is published by Council of Europe in 2019."><a href="https://rm.coe.int/16809382f9"><img class="handbook" src="assets/Handbook Cover.jpg" alt="Handbook Cover"></a></span>
-    <li class="bullet2"> <span class="bolded">Use of digital space for education</span><br> <span class ="highlight">Format and distribution</span> of the handbook:<br>The handbook is free and distributed online.<br> Everyone with access to the internet can read and download it.</li>
+    <li class="bullet2"> <span class="bolded">Use of digital world for education</span><br> <span class ="highlight">Format and distribution</span> of the handbook:<br>The handbook is free and distributed online.<br> Everyone with access to the internet can read and download it.</li>
   </div>
   <h6><span class="green2">Click</span> the cover above to learn more about the handbook.</h6>
-  <h2>IV. Education --> Digital World</h2>
-  <h7>Following the basic structure of the handbook, this project has 3 sections:</h7>
-    <ol class=sectionlist>
-      <nav>
-        <ur class="nav">
-          <a href="beingOnline/" class="orange">A. Being Online</a><br>
-          <a href="wellbeingOnline/" class="blue">B. Well-being Online</a><br>
-          <a href="rightsOnline/" class="green3">C. Rights Online</a><br>
-        </ur>
-      </nav>
-    </ol>
-  <h2>V. Digital world --> Education</h2>
-  <h4>More to be added...</h4>
-  </h3>
-</header>
+  <h4>Observe, this webpage also serves as a bijection example. <br> 
+    Education &#8594 Digital World, This digital document aims to serve as an educational tool by
+    organizing content regarding the digitizing of rights on Education and by facilitating conversations <br>
+    Education &#8592 Digital World, furthermore, by being a web page this document is easily accessible for all users</h4>
+  <h2>IV. Education &#8594 Digital World</h2>
+  <h3>Right to an Education of the Digital World:</h3>
+  <h7>Following the topics identified by the above handbook, this project has 3 sections:</h7>
+  <ol class="sectionlist">
+    <nav>
+      <div class="nav">
+        <a href="beingOnline/" class="orange">A. Being Online</a ><br>
+        <a href="wellbeingOnline/" class="blue">B. Well-being Online</a ><br>
+        <a href="rightsOnline/" class="green3">C. Rights Online</a ><br>
+      </div>
+    </nav>
+  </ol>
+  <h3>
+    Guiding Questions regarding Digital rights:<br>
+    <span class="italic"><span class="shadow">
+      Can we use digital literacy and hone the general capabilities of the 
+      internet to educate people about certain topics across the various disciplines 
+      covered in this document?
+      <ul>
+        <li><span class="cyan">Ecology:</span><br>How do we navigate the relationship between individual liberty and common good through the intersection of 
+        Ecology and the Digital World</li>
+        <li><span class="cyan">Corporate Power:</span> <br>Consider surveillance capitalism, informing people about who has access to their data, how they are using it, 
+        and how the structure of corporations allows for these pervasive processes to occur? </li>
+        <li><span class="cyan">Privacy:</span> <br>What data people are giving up when they sign digital agreements (terms and agreements) 
+        and how do we retain agency in these agreements?</li>
+        <li><span class="cyan">Freedom of Expression:</span> <br>Where do restrictions on expression come from? <br>
+        How do we navigate the relationship between freedom of expression and respecting 
+        possible negative outcomes from this liberty in the digital world? </li>
+        <li><span class="cyan">Property:</span> <br>When are digital entities using your property (with or without permission, intellectual or tangible property)? 
+        <br>How do we protect our property rights?</li>
+    </ul></span></span>
+    Check out the Preamble to learn more about these Digital Rights!</h3>
+  <h2>V. Education &#8592 Digital World</h2>
+  <h3>The Digital World for the Right to Education<h7>(Scroll over image for further explanation)</h7><br>
+    <span class="hovertxt" data-hover="As free and universal Education is a human right
+    and the Digital World provides a means of content creation and distribution, there should be a global 
+    investment in utilizing online educational resources. 
+    By not doing so we contradict the Universal Declaration of Human Rights.        "> 
+  <img class="DHR-ed" src="assets/DHR-ed.png" alt="DHR-ed" width=60% height=30%> </span> </h3> 
+  
+  <h2>VI. Rights vs. Responsibilites</h2>
+  <h4>Food for thought, extending the conversation past 'rights' and into 'responsibilties' </h>
+  <h3>It is important to note the largely individualistic objectives 
+    presented in the UDHR in regards to liberties. With our document, we wanted to 
+    emphasize how to navigate the relationship between rights versus responsibilities 
+    in the digital sphere. The digital sphere is a communal space wherein people all over the world
+     communicate, share, create and consume. In this communal space, there must be care taken 
+     towards respecting the common good, even if that means a small trade-off in certain personal 
+     liberties. For example, some people may consider hate speech to be falling under a personal 
+     liberty of freedom of speech, and this sentiment may be emboldened by the anonymity aspect 
+     of the internet. However, emphasizing the collective over the individual would mean blocking 
+     this speech to protect the larger good.</h3>
+     <span class="italic"><span class="cyan"><span class="shadow">
+      <ul>
+      <li>How does responsbility come into the conversation of Universal Rights?</li>
+      <li>How could Digital Responsibilites be enforced?</li>
+      <li>How could does responsibility exist with the anominitiy of the Digital World?</li> <br><br>
+    </ul></span></span></span>
+  
 </body>
