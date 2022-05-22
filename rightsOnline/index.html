@@ -1,26 +1,430 @@
 <style>
-  body {
-    background-color: rgb(91, 146, 229);
+  html, body{
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
   }
 
-  .logo {
-    width: 100%;
+  canvas {
+   display: block;
+   height: 100%;
+   width: 100%;
   }
 
-  article {
-    max-width: 500px;
-    margin: 0 auto;
-    color: rgb(255, 255, 255);
+  html {
+    background: rgb(61,173,219);
+    background: linear-gradient(360deg, rgba(61,173,219,1) 16%, rgba(77,131,212,1) 100%) fixed;
+    background-repeat: no-repeat;
   }
 
-  h2 {
+  .udhrlogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    width: 20%;
+  }
+
+  h1{
+    margin-top: 1vw;
+    display: block;
+    color: #221E1F;
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: .5vw;
+    margin-left: 0vw;
+    margin-right: 0vw;
+  }
+
+  h2{
+      font-family: sans-serif;
+      padding-bottom: 0px;
+      font-size: 2.5vw;
+      padding-left: 8vw;
+      margin-top: -2px;
+      display: block;
+      color: #221E1F;
+      line-height: 2.5em;
+      margin-bottom: 7px;
+  }
+
+  .sectionlist{
+    line-height: 4.5vw;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-left: 9vw;
+    margin-top: 1vw;
+    color: #221E1F;
+    margin-bottom: 1vw;
+  }
+
+  .principleslist{
+    display: block;
+    color: #221E1F;
+    font-style: normal;
+    font-size: 1.7vw;
+    font-weight: 600;
+    line-height: 4vw;
+    margin-left: 10vw;
+    margin-top: 0vw;
+    margin-bottom: 1vw;
+  }
+
+  .highlight{
+    border-bottom: 2px solid white;
+  }
+
+  .bolded{
+    font-weight: 700;
+  }
+
+  .greenhighlight{
+    color: #008B8B;
+    font-weight: 600;
+    background: #96c020;
+  }
+
+  .quote{
+    font-weight: bold;
+    font-size: 3vw;
+    margin-right: 1.5vw;
+    margin-left: 1vw;
+  }
+  .udhrarticle{
     font-family: sans-serif;
-    padding-bottom: 10px;
-		border-bottom: 3px solid rgb(255, 255, 255);
+    font-weight: 400;
+    padding-bottom: 0px;
+    font-size: 1.3vw;
+    font-style: italic;
+    padding-left: 12vw;
+    margin-top: 0px;
+    display: block;
+    color: #221E1F;
+    line-height: 2.5em;
+    margin-bottom: 7px;
   }
 
-  p {
-    line-height: 20px;
+  .subarticle{
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-size: 1.5vw;
+    margin-right: 8vw;
+    font-weight: 700;
+  }
+
+  .cyan{
+    color: #00ffef;
+    font-weight: bold;
+  }
+
+  h4{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-size: 1.8vw;
+    padding-left: 12vw;
+    margin-top: 0px;
+    display: block;
+    color: #221E1F;
+    line-height: 2em;
+    margin-bottom: 7px;
+  }
+
+  .italic{
+    font-style: italic;
+  }
+
+  .shadow{
+    text-shadow: 1px 3px 7px #221E1F;
+  }
+
+  .orange{
+    color: #f49d70;
+  }
+
+  .blue{
+    color: #99d3d5;
+  }
+
+  .green1{
+    color: #96c020;
+  }
+
+  .cyanhighlight{
+    border-bottom: 3px solid #00ffef;
+  }
+
+  h5{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-size: 2.3vw;
+    padding-left: 16vw;
+    margin-top: 0px;
+    display: block;
+    color: #221E1F;
+    line-height: 2em;
+    margin-bottom: 7px;
+  }
+
+
+  h6{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-weight: 400;
+    font-size: 1.3vw;
+    padding-left: 20vw;
+    padding-right: 0vw;
+    margin-top: 0px;
+    display: block;
+    color: #221E1F;
+    line-height: 2.8em;
+    margin-bottom: 7px;
+  }
+
+  .lillist{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-weight: 600;
+    font-size: 1.5vw;
+    padding-left: 19vw;
+    margin-top: 0px;
+    display: block;
+    color: #221E1F;
+    line-height: 2em;
+    margin-bottom: 7px;
+  }
+
+  .arrowdown{
+    display: block;
+    margin-left: 1.7vw;
+    margin-bottom: 0px;
+    width: 3%;
+  }
+
+  .metadatah7{
+    font-size: 1.6vw;
+    font-weight: bold;
+    font-style: italic;
+    width: 28vw;
+    color: #00688b;
+    background-color:#97db81;
+    margin-left: 76.5%;
+    margin-top: 0vw;
+    height: 1.2em;
+  }
+
+  .metadatadiv{
+    display: flex;
+  }
+
+  .bulletpt{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-weight: 400;
+    font-size: 1.5vw;
+    padding-left: 5vw;
+    padding-right: 0vw;
+    width: 47vw;
+    color: #221E1F;
+    line-height: 3em;
+    margin-top: -1.5vw;
+    margin-left: 17vw;
+  }
+
+  p{
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: #221E1F;
+    width: 21%;
+    margin-left: 2.3vw;
+    padding: 1vw .5vw .5vw 1vw;
+    border-style: dashed;
+    border-color: #97db81;
+    border-width: .3vw;
+    height: 40%;
+  }
+
+  iframe{
+    margin-top: 20vw;
+    margin-left: -20.5vw;
+    margin-bottom: 2vw;
+  }
+
+  .purpletitle{
+    color: #ccccff;
+    background: #7b68ee;
+    font-size: 1.9vw;
+    border: inset;
+    border-color: #a9a9a9;
+    font-weight: 600;
+  }
+
+  .purple{
+    color: #ccccff;
+    background: #7b68ee;
+    font-size: 1.8vw;
+    border: inset;
+    border-color: #a9a9a9;
+    margin-left: 3vw;
+    font-weight: 500;
+    line-height: 4.5vw;
+  }
+
+  .grouplink1{
+    font-size: 1.6vw;
+    font-weight: bold;
+    font-style: italic;
+    color: #cc3365;
+    margin-left: 50vw;
+    text-align: right;
+  }
+
+  .regular{
+    font-weight: 400;
+  }
+
+  .uniConnectivity{
+    color: #221E1F;
+    margin-left: 54vw;
+    font-size: 1.6vw;
+    font-weight: 500;
+    border: .35vw dashed #99d3d5;
+    padding-left: 1vw;
+    width: 40vw;
+    margin-top: 2vw;
+    padding-top: .7vw;
+  }
+
+  .connectivity{
+    display: block;
+    margin-left: 0vw;
+    color: #cc3365;
+    line-height: 2.6vw;
+    font-size: 1.3vw;
+  }
+
+  .connectivityTY{
+    color: #cc3365;
+  }
+
+  .bulletpt2{
+    font-family: sans-serif;
+    padding-bottom: 0px;
+    font-weight: 400;
+    font-size: 1.5vw;
+    padding-left: 5vw;
+    padding-right: 0vw;
+    color: #221E1F;
+    line-height: 3em;
+    margin-top: 1vw;
+    margin-left: 17vw;
+    margin-right: 2vw;
+  }
+
+  .principleslist{
+    font-size: 2.1vw;
+  }
+
+  .grouplink2{
+    font-size: 1.6vw;
+    font-weight: bold;
+    font-style: italic;
+    color: #cc3365;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+  }
+
+
+  .preamblelink{
+    font-size: 1.6vw;
+    font-weight: bold;
+    font-style: italic;
+    color: #cc3365;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+  }
+
+  .capitalistYT{
+    margin-top: 2vw;
+    margin-left: 1.5vw;
+    margin-bottom: 2vw;
+  }
+
+  .smalltext{
+    font-size: 1.2vw;
+  }
+
+  .midtext{
+    font-size: 1.6vw;
+    line-height: 4vw;
+  }
+
+  h8{
+    margin-left: 1vw;
+    line-height: 3.2vw;
+  }
+
+  .ecoarticlelink{
+    color: #221E1F;;
+    font-style: italic;
+    font-size: 1.5vw;
+    margin-left: .5vw;
+  }
+
+  .star{
+    width: 4vw;
+    height: 4vw；
+    margin-left: 4vw;
+  }
+
+  .summary{
+    font-size: 1.8vw;
+    line-height: 4vw;
+  }
+
+  h9{
+    margin-left: 10vw;
+  }
+
+  .embedvid1{
+    position: relative;
+    padding-bottom: 60%;
+    margin-top: -28vw;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 0vw;
+  }
+
+  .embedvid1 iframe{
+    border: 0;
+    position: absolute;
+    top: 7vw;
+    left: 48vw;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 0vw;
+    padding-bottom: 0vw;
+  }
+
+  .embedvid2{
+    position: relative;
+    padding-bottom: 54.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .embedvid2 iframe{
+    border: 0;
+    position: absolute;
+    top: 2vw;
+    left: 0;
+    width: 90%;
+    height: 90%;
   }
 
   .nav{
@@ -71,18 +475,161 @@
     box-shadow: 2px 3px 5px black;
     cursor: wait;
   }
+
 </style>
 
 <body>
-  <img class="logo" src="https://freedomandsafety.com/sites/default/files/UDHR.jpg" alt="UDHR logo">
+  <img class="udhrlogo" src="../assets/UN Logo.png" alt="UN logo">
 <header>
+  <meta name="viewport" content="width=device-width">
   <h1> Rights Online </h1>
+  <h2>I. Catalogue
+  <span class="midtext">&nbsp;[Click to Jump to Section]</span></h2>
+  <ol class="sectionlist">
+    <a href="#OverarchingPrinciples"><li> Overarching Principles</li></a>
+    <a href="#Privacy"><li> Privacy in the Digital Age</li></a>
+    <a href="#Expression"><li> Freedom of Expression in the Digital Age</li></a>
+    <a href="#Awareness"><li> Netizen Awareness</li></a>
+    <a href="#Summary"><li> Conclusion: Role of Education</li></a>
+  </ol>
+  <h2 id="OverarchingPrinciples">II. Overarching Principles</h2>
+  <ol class="principleslist">
+    <li> Individuals should recognize that the same rights that people have <span class="greenhighlight">offline</span> must also be protected <span class="greenhighlight">online</span>.</li>
+    <li> Education should <span class="greenhighlight">bring awareness of</span> individuals’ rights and responsibilities associated with their digital activities.</li>
+    <li> Individuals should have a knowledge of <span class="greenhighlight">how to protect</span> their rights.</li>
+  </ol>
+  <h2 id="Privacy">III. Rights to Privacy in the Digital Age</h2>
+  <h3 class="udhrarticle"><span class="quote">“</span>No one shall be subjected
+    to arbitrary interference with his  <span class="cyan">privacy</span>,
+    <span class="highlight">family</span>, <span class="highlight">home</span> or <span class="highlight">correspondence</span>,
+    nor to attacks upon his honour and reputation. Everyone has the right to the
+    protection of the law against such interference or attacks.<span class="quote">”</span>
+    <span class="subarticle">--Article 12 UDHR</span><br>
+  </h3>
+  <h4> 1. <span class="cyanhighlight">Reconsider</span> the meanings of these terms:
+     <span class="shadow"><span class="italic"><span class="orange">family</span>, <span class="blue">home</span>,
+     <span class="green1">correspondence</span></span></span> in the online world
+  </h4>
+  <h5><span class="shadow"><span class="orange">A. Family</span></span></h5>
+  <h6 class="lillist">
+    i. The privacy of individuals’ family members, as expressed in <span class="greenhighlight">family life</span>:
+  </h6>
+  <h6>When individuals post family photos or information about their family activities online, they should be conscious of the
+    potential threats to not only their privacy but also their family members' privacy.
+    Always ask for family members' <span class="highlight"> permission</span> before sharing their photos.</h6>
+  <h5><span class="shadow"><span class="blue">B. Home</span></span></h5>
+  <h6 class="lillist">
+    i. <span class="cyanhighlight">Extending</span> broad protection to personal space other than one’s residence<br>
+    <img class="arrowdown" src="../assets/arrow-down.png" alt="arrow down">
+    ii. An individual’s home may now encompass <span class="greenhighlight">virtual spaces</span>, such as <span class="highlight">social media websites and email inboxes</span>
+  </h6>
+  <h5><span class="shadow"><span class="green1">C. Correspondence</span></span></h5>
+  <h6 class="lillist">
+    i. include all <span class="greenhighlight">electronic forms</span> of communication, such as electronic mail and instant messages<br>
+  ii. include <span class="highlight"><span class="cyan">METADATA</span></span>
+  </h6>
+  <h7 class="metadatah7">* what is metadata?</h7>
+  <div class="metadatadiv">
+    <ul class="bulletpt">
+      <li>When collected, aggregated, and analyzed,<br>
+      metadata is <span class="highlight">no less sensitive</span> than the contents of communications.</li>
+      <li>There is <span class="highlight">no sharp distinction</span> between the content of a communication and metadata. It’s more of a continuum.</li>
+      <li>Check out the <span class="shadow"><span class="orange">video below</span></span> published by Naomi Brockwell to learn more about how metadata impacts online privacy and how to scrub it.</li>
+    </ul>
+  <p>
+    Metadata = "data about data."<br>
+    Metadata is data that provides information about other data.<br>
+    <br>
+    Examples of metadata:<br>
+    -Your IP address<br>
+    -Your location<br>
+    -Your device information<br>
+    -The date the file/image was created<br>
+    ...<br>
+  </p>
+  </div>
+  <div class ="embedvid1">
+  <iframe width="230" height="130" src="https://youtube.com/embed/OSln3MliFyA"></iframe>
+  </div>
+  <h4><span class="cyanhighlight">2</span>. <span class="purpletitle">Role of Education</span></h4>
+  <h4><span class="italic"><span class="purple">Only if individuals have a basic knowledge of their rights to privacy and the threats to their online privacy, they can take actions to protect themselves.</span></span></h4>
+  <a class="grouplink1" href="https://net-art-uchicago.github.io/DHR-Privacy">Click here to learn more about the rights to privacy in the digital age...</a>
+  <h2 id="Expression">IV. Rights to Freedom of Expression in the Digital Age</h2>
+  <h3 class="udhrarticle"><span class="quote">“</span>Everyone has <span class="cyan">the right to freedom of opinion and expression</span>;
+    this right includes freedom to hold opinions <span class="highlight">without interference</span> and to seek, receive and impart information
+    and ideas through any media and <span class="highlight">regardless of frontiers</span>.<span class="quote">”</span>
+    <span class="subarticle">--Article 19 UDHR</span><br>
+  </h3>
+  <h4>
+    1. <span class="cyanhighlight">Reconceptualize</span> these terms:
+     <span class="shadow"><span class="italic"><span class="blue">without interference</span>, <span class="green1">regardless of frontiers</span></span></span> in the online world
+  </h4>
+  <h5><span class="shadow"><span class="blue">A. Regarless of frontier</span></span></h5>
+  <h6 class="lillist">
+    i. <span class="cyan">*</span>For the most part, there is <span class="cyanhighlight">no boundaries/frontiers</span> in the online world<br>
+    <img class="arrowdown" src="../assets/arrow-down.png" alt="arrow down">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;an <span class="greenhighlight"><span class="italic"><span class="cyan"><span class="shadow">universal</span></span></span> access</span> to education on rights online<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;*<span class="italic"><span class="cyan">internet acesss is a human rights.</span></span> <span class="regular">Basic internet access is not enough. We need</span> <span class="italic"><span class=greenhighlight>universal connectivity.</span></span><br>
+  </h6>
+  <div class="uniConnectivity">
+  Internet connectivity is not universal<span class="quote">?</span>
+  <ol class="connectivity">
+    <li><a href="https://www.youtube.com/watch?v=fTTno8D-b2E" class="connectivityTY"><span class="italic">This is Cuba's Netflix, Hulu, and Spotify – all without the internet</span></a></li>
+    <li><a href="https://www.youtube.com/watch?v=72dPr4qcPSM" class="connectivityTY"><span class="italic">Inequalities Amplified By COVID-19 Highlight Internet Access As Privilege | NBC News NOW</span></a></li>
+  </ol>
+  </div>
+  <h5><span class="shadow"><span class="green1">B. Without interference</span></span></h5>
+  <h6 class="lillist">
+    i. Education as a solution to <span class="greenhighlight">warn against censorship</span> while provide methods for individuals to <span class="cyanhighlight">protect</span> &nbsp;&nbsp;&nbsp;<span class="cyanhighlight">themselves</span>
+  </h6>
+  <h4><span class="cyanhighlight">2</span>. <span class="purpletitle">Role of Education</span></h4>
+  <h4><span class="italic"><span class="purple">a. Indivisuals should have a clear understanding that internet access is a human rights</span></span></h4>
+  <h4><span class="italic"><span class="purple">b. Warn against censorship while teach individuals how to protect themselves</span></span></h4>
+  <h4>&nbsp;&nbsp;&nbsp;&nbsp;<span class="italic"><span class="purple">i. Warn against censorship while address online abuse and harassment</span></span></h4>
+    <li class="bulletpt2"><span class="bolded">Individuals should have the <span class="cyanhighlight">ability to control and define</span> their online experiences.</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="italic">For example, they should know <span class="greenhighlight">
+        how to use tools</span> that permit them to <span class="highlight">block</span> specific individuals,
+        <span class="highlight">control their </span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="highlight">privacy</span>,
+        or <span class="highlight">tailor their interactions</span> to protect themselves <span class="cyanhighlight">against abusive behavior</span>.</span></li>
+  <h4>&nbsp;&nbsp;&nbsp;&nbsp;<span class="italic"><span class="purple">ii. Warn against censorship while address misinformation</span></span></h4>
+  <li class="bulletpt2"><span class="bolded">Individuals should have the <span class="cyanhighlight">ability to identify</span> <span class="greenhighlight">rustworthy accounts/sources of information</span> to
+    avoid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;misinformation.</span></li>
+  <a class="grouplink2" href="https://net-art-uchicago.github.io/DHR-Expression">Click here to learn more about the rights to freedom of expression in the digital age...</a><br>
+  <h2 id="Awareness">V. Netizen Awareness</h2>
+  <ol class="principleslist">
+    <li> Often being a digital citizen/user <span class="quote">=</span> being <span class="greenhighlight">a consumer</span></li>
+    <img class="arrowdown" src="../assets/arrow-down.png" alt="arrow down">
+    <h7><span class="midtext"> To maintain their <span class="highlight">autonomy</span> as digital citizens, individuals should recognize the <span class="cyanhighlight">commercial reality</span> of the online spaces.<br>
+      Corporations such as Big Tech are extracting benefits from your private information(i.e., your data) without your knowledge.<br>
+      <span class="shadow"><span class="cyan"><span class="italic">Should the corporations be able to store our data in the first place?</span></span></span></span><br></h7>
+  <h8 class="smalltext"> <span class="regular">* Below is a documentary on <span class="greenhighlight">Survilliance Capitalism</span>.</span> Watch it to learn more about the <span class="italic"><span class="cyan"><span class="shadow">'shadow operations'</span></span></span> of the biggest tech companies.</span></h8><br>
+  <div class ="embedvid2">
+      <iframe class="capitalistYT" width="300" height="178" src="https://www.youtube.com/embed/hIXhnWUmMvw"></iframe>
+  </div>
+      <a class="grouplink2" href="https://net-art-uchicago.github.io/DHR-Property"> Click here to learn about your property in the digital age...</a><br>
+      <a class="grouplink2" href="https://net-art-uchicago.github.io/DHR-Corporate-Power">Click here to learn more about how the corporate power threatens your human rights in the digital age...</a><br>
+    <li> The <span class="greenhighlight">environmental costs</span> associated with their digital activities</li>
+    <a class="ecoarticlelink" href="https://www.bbc.com/future/article/20200305-why-your-internet-habits-are-not-as-clean-as-you-think">BBC Smart Guide to Climate Change: Why your internet habits are not as clean as you think</a><br>
+    <a class="grouplink2" href="https://net-art-uchicago.github.io/DHR-Ecology">Click here to learn more about the enviornmental impact of digital activities & how you can help...</a><br>
+  </ol>
+  <h2 id="Summary">V. Rights Online: Role of Education</h2>
+  <div>
+    <span class="bolded"><h9 class="summary">&nbsp;&nbsp;&nbsp;&nbsp;Through education, individuals should</h9><br>
+    <span class="italic"><h9 class="summary"><img class="star" src="../assets/star.png" alt="star">Be aware of their human rights in the digital world</h9><br>
+    <h9 class="summary"><img class="star" src="../assets/star.png" alt="star">Be able to recognize those threats to their rights</h9><br>
+    <h9 class="summary"><img class="star" src="../assets/star.png" alt="star">Be conscious of their digital activities and responsibilities associated with them</h9><br>
+    <h9 class="summary"><img class="star" src="../assets/star.png" alt="star">Be able to take actions to protect themselves and others</h9><br>
+  </span></span></div>
+  <a class=grouplink2 href="https://net-art-uchicago.github.io/Digitizing-Human-Rights">Click here to go back to the preamble...</a><br>
+  <br>
+  <br>
   <nav>
-    <ur class="nav">
+    <div class="nav">
       <a href="../index.html" class="sectionBTN0">Home</a>
       <a href="../beingOnline/" class="sectionBTN1">I. Being Online</a>
       <a href="../wellbeingOnline/" class="sectionBTN2">II. Well-being Online</a>
-    </ur>
+    </div>
   </nav>
 </header>
 </body>
